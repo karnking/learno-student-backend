@@ -22,4 +22,4 @@ app.get('/send-notification', (req, res) => {
     io.emit('notification', 'Notification from server');
     res.send('Notification sent');
 });
-server.listen(8080);
+server.listen(process.env.PORT || 8080);
